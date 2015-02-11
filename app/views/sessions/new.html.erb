@@ -1,0 +1,18 @@
+<h1>Please sign in bro</h1>
+
+<%= form_tag authenticate_session_path do %>
+  <div>
+    <%= label_tag :username %><br/>
+    <%= text_field_tag :username %>
+  </div>
+
+  <div>
+    <%= label_tag :password %><br/>
+    <%= password_field_tag :password %>
+  </div>
+
+  <div>
+    <%= submit_tag "Sign in" %>
+  </div>
+
+<% end %>

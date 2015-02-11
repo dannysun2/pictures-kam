@@ -1,0 +1,18 @@
+<h1>Pictures</h1>
+<div class='col-md-12'>
+<div class='row'>
+<%= link_to "Add New Picture", new_picture_path, class: "btn btn-default" %>
+</div>
+</div>
+
+<%= paginate @pictures %>
+
+<div class="row">
+<% @pictures.each do |picture| %>
+  <div class="col-md-3">
+    <%= link_to image_tag(picture.photo.url(:thumb), class: "thumbnail img-responsive"), picture.photo.url(:large) %>
+  </div>
+<% end %>
+</div>
+
+<%= paginate @pictures %>
